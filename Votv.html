@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Votv V2 - Game Preview</title>
+  <style>
+    body { background: #222; color: #eee; font-family: Arial; margin: 0; }
+    #gameCanvas { background: #161616; display: block; margin: 40px auto; border: 2px solid #444; }
+    #controls { max-width: 800px; margin: auto; }
+    #controls span { display:inline-block; width: 120px; }
+    #jsonArea { width: 100%; height: 120px; margin-top: 10px; background: #111; color: #eee; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Votv V2 - Game Preview</h1>
+  <canvas id="gameCanvas" width="800" height="400"></canvas>
+  <div id="controls">
+    <h3>Controls:</h3>
+    <div>
+      <span>W / Up Arrow:</span> Move Forward<br>
+      <span>S / Down Arrow:</span> Move Backward<br>
+      <span>A / Left Arrow:</span> Turn Left<br>
+      <span>D / Right Arrow:</span> Turn Right<br>
+      <span>Space:</span> Interact<br>
+      <span>Mouse:</span> Look Around<br>
+    </div>
+    <button onclick="loadJSON()">Load Objects from JSON</button>
+    <textarea id="jsonArea">
+// Example JSON
+{
+  "objects": [
+    {"type":"bed", "x":120, "y":130},
+    {"type":"server", "x":320, "y":100},
+    {"type":"console", "x":400, "y":220},
+    {"type":"atv", "x":700, "y":310},
+    {"type":"suv", "x":650, "y":70}
+  ]
+}
+    </textarea>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
